@@ -61,11 +61,10 @@ A primeira vista, vai ter muito erro no código, mas iremos resolver tudo com as
 ======================================================CÓDIGO==============================================================
 
 
-/*  ATENÇÃÃÃÃÃÃÃÃO, OS LUGARES NO CÓDIGO QUE ESTIVEREM CERCADOS POR DUPLO ASTERISCO (**EXEMPLO**), DEVEM SER SUBSTITUIDOS PELO VALOR QUE FAÇA SENTIDO PARA A SUA ADAPTAÇÃO.
-    EXEEEEMPLO: package **br.nomeDoProjeto**;    FICARÁ > package br.meuProjeto; */
+/*  ATENÇÃÃÃÃÃÃÃÃO, MUDE TODOS OS NOMES DE PACOTES, CLASSES E VARIAVEIS PARA QUE FAÇAM SENTIDO NO SEU PROJETO*/
 
 
-package **br.nomeDoProjeto**;
+package br.nomeDoProjeto;
 
 import java.sql.ResultSet;
 
@@ -88,7 +87,7 @@ import okhttp3.Response;
 
 
 
-public class *nome da classe* implements AcaoRotinaJava {
+public class nomeDaClass implements AcaoRotinaJava {
 
 	@Override
 	public void doAction(ContextoAcao arg0) throws Exception {
@@ -107,7 +106,7 @@ public class *nome da classe* implements AcaoRotinaJava {
 
 			sql = new NativeSql(jdbc);
 
-			sql.appendSql(**SUA CONSULTA**);
+			sql.appendSql(/*SUA CONSULTA*/);
 
 			/* EXEMPLO DE CONSULTA    >>>> sql.appendSql("SELECT TESTETXT AS TESTE, CODTESTEDANILO AS CODTESTE\r\n"
 								      + "FROM AD_TESTEDANILO"); */
@@ -117,7 +116,7 @@ public class *nome da classe* implements AcaoRotinaJava {
 			rset = sql.executeQuery();
 			
 			/*O WHILE ABAIXO FICARA RESPONSÁVEL POR ARMAZENAR OS DADOS DA CONSULTA NAS VARIAVEIS COM NOMES QUE FIZEREM SENTIDO PARA O CÓDIGO
-			, NESSE CASO A VARIAVEL1 E VARIAVEL2 ESTÃO ARMAZENANDO OS VALORES DA CONSULTA DAS COLUNAS "TESTE" E "CODTESTE" RESPECTIVAMENTE */
+			, NESSE CASO A VARIAVEL1 E VARIAVEL2 ESTÃO ARMAZENANDO OS VALORES DO EXEMPLO DE CONSULTA DAS COLUNAS "TESTE" E "CODTESTE" RESPECTIVAMENTE */
 				
 			while (rset.next()) {
 				String VARIAVEL1 = rset.getString("TESTE");
@@ -152,11 +151,11 @@ public class *nome da classe* implements AcaoRotinaJava {
 			okhttp3.MediaType mediaType = okhttp3.MediaType.parse("text/plain");
 			
 			RequestBody body = new FormBody.Builder()
-				      .add("**nome da chave do JSON que você deseja enviar a informação dessa variável**", VARIAVEL1)
-				      .add("**nome da chave do JSON que você deseja enviar a informação dessa variável**", VARIAVEL2)
+				      .add("/*nome da chave do JSON que você deseja enviar a informação dessa variável*/", VARIAVEL1)
+				      .add("/*nome da chave do JSON que você deseja enviar a informação dessa variável*/", VARIAVEL2)
 				      .build();
 			
-			String urlApi = "**url completa da sua api, se for necessário algum tipo de token, o token deve ser passado junto a url da API**";
+			String urlApi = "/*url completa da sua api, se for necessário algum tipo de token, o token deve ser passado junto a url da API*/";
 			Request request = new Request.Builder()
 					  .url(urlApi)
 					  .method("POST", body)
@@ -183,4 +182,3 @@ public class *nome da classe* implements AcaoRotinaJava {
 
 ```
 O código acima está preparado para enviar informações para a sua API utilizando o METHOD POST, se a sua necessidade for outro METHOD, faça a devida adaptação ao código.
-```
