@@ -23,7 +23,7 @@ Essas instruções permitirão que você consiga realizar uma comunicação entr
 ```
 -Conhecimentos da plataforma SANKHYA:
 ```
--Importar no seu workspace as dependências que contém as extensões necessárias para o SANKHYA compreender seu código. >https://developer.sankhya.com.br/docs/sdk-sankhya
+-Importar no seu workspace as bibliotecas que contém as extensões necessárias para o SANKHYA compreender seu código. >https://comunidade.sankhya.com.br/t/dica-como-baixar-bibliotecas-nativas-jars/4159
 -Conhecimentos básicos sobre o sistema Sankhya.
 -Compreender consultas na tela de DBEXPLORER(MySQL).
 -Entender como funciona tela de construtor de telas. --universidade sankhya >https://ead.sankhya.com.br/html/videos.php?curso=2501&up=1
@@ -182,4 +182,35 @@ public class nomeDaClass implements AcaoRotinaJava {
 ===============FIM DO CÓDIGO=============
 
 ```
-O código acima está preparado para enviar informações para a sua API utilizando o METHOD POST, se a sua necessidade for outro METHOD, faça a devida adaptação ao código.
+O código acima está preparado para enviar informações para a sua API utilizando o METHOD POST com OkHttp, se a sua necessidade for outro METHOD, faça as devidas adaptações ao código.
+```
+
+```
+Baixe todas as 
+```
+
+
+## 🛠️ Construído com
+```
+
+```
+
+## 📌 Versão
+
+tutorial ainda em construção.
+
+## ✒️ Autor
+
+Danilo Teófilo  
+Me adicione no linkedin(https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/)
+
+
+## 📄 Licença
+
+Projeto livre!
+
+## 🎁 Expressões de gratidão
+
+* Se curtiu, deixe uma star no projeto e ajude esse dev iniciante com seu apoio moral 📢;
+
+
