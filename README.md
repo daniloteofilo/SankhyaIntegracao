@@ -1,4 +1,4 @@
-# INTEGRAÇÃO DE SISTEMAS COM O SANKHYA POR DANILO TEOFILO ~https://github.com/daniloteofilo
+# INTEGRAÇÃO DE SISTEMAS VIA SANKHYA, POR DANILO TEOFILO ~https://github.com/daniloteofilo
 
 # Pequeno manual de instruções para que devs que utilizam o ERP SANKHYA consigam entender e fazer uma integração de sistemas via API.
 
