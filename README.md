@@ -58,9 +58,8 @@ Adicionar uma nova class dentro do pacote criado anteriormente.
 Abrir o código da class criada e colar nele o código de integração a seguir com as alterações necessárias para o seu projeto.
 A primeira vista, vai ter muito erro no código, mas iremos resolver tudo com as devidas importações.
 ```
-======================================================CÓDIGO==============================================================
-
-
+================CÓDIGO=================
+```
 /*  ATENÇÃÃÃÃÃÃÃÃO, MUDE TODOS OS NOMES DE PACOTES, CLASSES E VARIAVEIS PARA QUE FAÇAM SENTIDO NO SEU PROJETO*/
 
 
@@ -164,7 +163,7 @@ public class nomeDaClass implements AcaoRotinaJava {
 						
 			Response response = client.newCall(request).execute();
 
-			String result = response.body().string(); // capturando resposta da requisi��o
+			String result = response.body().string(); // capturando resposta da requisicao
 
 		} catch (Exception e) {
 
@@ -177,8 +176,10 @@ public class nomeDaClass implements AcaoRotinaJava {
 }
 
 
+```
 
-======================================================FIM DO CÓDIGO==============================================================
+
+===============FIM DO CÓDIGO=============
 
 ```
 O código acima está preparado para enviar informações para a sua API utilizando o METHOD POST, se a sua necessidade for outro METHOD, faça a devida adaptação ao código.
