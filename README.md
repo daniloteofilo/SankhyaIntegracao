@@ -88,7 +88,7 @@ import okhttp3.Response;
 
 
 
-public class **nome da classe** implements AcaoRotinaJava {
+public class *nome da classe* implements AcaoRotinaJava {
 
 	@Override
 	public void doAction(ContextoAcao arg0) throws Exception {
