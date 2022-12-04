@@ -44,7 +44,7 @@ Abra a IDE da sua preferência e mãos na massa, eu utilizo eclipse.
 ```
 
 ```
-Criar um novo Java Project(projeto java) com o nome que fizer sentido acompanhado do prefixo "br."(Exemplo:  br.meuProjeto), no quadro JRE, o primeiro select você vai colocar a versão JavaSE1.8
+Criar um novo Java Project(projeto java) com o nome que fizer sentido acompanhado do prefixo "br."(Exemplo:  br.meuProjeto), visualize o quadro JRE, no primeiro select você vai colocar a versão JavaSE1.8
 ```
 
 ```
