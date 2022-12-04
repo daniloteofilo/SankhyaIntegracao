@@ -10,9 +10,11 @@ Essas instruções permitirão que você consiga realizar uma comunicação entr
 
 -Ter o sistema Sankhya instalado na máquina.
 
--Java na versão necessária instalado.
+-Java na versão necessária.
 
 -IDE de sua preferência.
+
+-Importar no seu workspace as bibliotecas que contém as extensões necessárias para o SANKHYA compreender seu código. >https://comunidade.sankhya.com.br/t/dica-como-baixar-bibliotecas-nativas-jars/4159
 
 -Conhecimentos de programação:
 ```
@@ -23,7 +25,6 @@ Essas instruções permitirão que você consiga realizar uma comunicação entr
 ```
 -Conhecimentos da plataforma SANKHYA:
 ```
--Importar no seu workspace as bibliotecas que contém as extensões necessárias para o SANKHYA compreender seu código. >https://comunidade.sankhya.com.br/t/dica-como-baixar-bibliotecas-nativas-jars/4159
 -Conhecimentos básicos sobre o sistema Sankhya.
 -Compreender consultas na tela de DBEXPLORER(MySQL).
 -Entender como funciona tela de construtor de telas. --universidade sankhya >https://ead.sankhya.com.br/html/videos.php?curso=2501&up=1
