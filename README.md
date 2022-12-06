@@ -1,4 +1,4 @@
-# INTEGRAÇÃO BÁSICA DE SISTEMAS VIA SANKHYA, POR DANILO TEOFILO ~https://github.com/daniloteofilo
+# INTEGRAÇÃO BÁSICA DE SISTEMAS VIA SANKHYA, POR DANILO TEOFILO ~https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/
 
 ## Pequeno manual de instruções para que devs que utilizam o ERP SANKHYA consigam entender e fazer uma integração de sistemas via API com os métodos *POST* e *GET*.
 
@@ -23,6 +23,9 @@ Essas instruções permitirão que você consiga realizar uma comunicação entr
 -Saber como consumir uma API e entender os diferentes tipos de "METHOD".	>https://arthur-almeida.medium.com/consumindo-uma-api-de-maneira-simples-com-java-2a386010e4b9
 -SQL.	--Curso de sql > https://www.youtube.com/watch?v=G7bMwefn8RQ
 ```
+
+-Ter uma tela construída e lançada no menu Construtor de Telas.
+
 -Conhecimentos da plataforma SANKHYA:
 ```
 -Conhecimentos básicos sobre o sistema Sankhya.
@@ -31,9 +34,11 @@ Essas instruções permitirão que você consiga realizar uma comunicação entr
 -Saber utilizar a tela de módulo java. >https://www.youtube.com/watch?v=m8LjHp5k3SI
 ```
 
+
+
 ### 🔧 Implementação
 
-Essa etapa será com os seguintes passos:
+#### Essa etapa será com os seguintes passos:
 
 ```
 Primeiramente iremos preparar o arquivo de código java que executará toda a ação.
@@ -84,7 +89,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-
 
 
 public class nomeDaClass implements AcaoRotinaJava {
@@ -179,7 +183,6 @@ public class nomeDaClass implements AcaoRotinaJava {
 
 ```
 
-
 ===============FIM DO CÓDIGO=============
 
 ```
@@ -191,12 +194,32 @@ Baixe todas as libs relacionadas ao SDK que o sankhya necessita para rodar e fa�
 ```
 
 ```
-Note que no seu código copiado da explicação, a maioria dos imports não estarão funcionando, tente clicar nos erros e fazer os imports recomendados, alguns deles serão diretamente do SDK do sankhya. Para alguns imports, vc terá que fazer a aquisição da lib de forma manual, baixe todas as libs necessárias e manualmente inclua nas dependências do seu projeto, faça as devidas correções que o código irá pedir.
+Note que no seu código copiado da explicação, a maioria dos imports não estarão funcionando, tente clicar nos erros e fazer os imports recomendados, alguns deles serão diretamente do SDK do sankhya. Para alguns imports, você terá que fazer a aquisição da lib de forma manual, baixe todas as libs necessárias e manualmente inclua nas dependências do seu projeto, depois faça as devidas correções que o código irá pedir.
 ```
 
 ```
 Quando o código estiver "setado" de maneira que seu IDE não esteja reconhecendo erros, faça o EXPORT do seu projeto com a extensão .jar, para que seja possível fazer o upload dele no *Sankhya* para a tela de MÓDULO JAVA. A grande dica aqui é que você consiga fazer o código rodar de maneira que o resultado desejado seja alcançado, já que para debugar dentro do próprio sankhya seria bem mais complicado.
 ```
+
+#### Para fazer o teste, basta seguir os próximos passos.
+
+```
+Ir no menu "Construtor de Telas", clicar na aba "Ações" e adicionar uma nova ação.
+```
+*OS CAMPOS OBRIGATÓRIOS PODEM PREENCHIDOS COM A SEGUINTE RECOMENDAÇÃO:*
+```
+ No campo de descrição 
+	coloque um nome que faça sentido, de preferência que seja um verbo que reflita o que o seu código está programado para fazer,
+		 defina o tipo como "Rotina Java", 
+			escolha o módulo que você criou na tela "Módulo Java",
+				 clique em *Baixar biblioteca de extensões* e escolha a classe que contém o código que será executado.
+```
+
+Depois seguiremos para nossa tela criada, assim como recomendado na linha 27 desse manual de instruções.
+	Clique no botão de ação
+		Execute a ação nomeada no campo de descrição
+			SE TIVER DADO TUDO CERTO, O CÓDIGO SIMPLESMENTE EXECUTARÁ E NÃO APARECERÁ NENHUMA MENSAGEM, 
+				VERIFIQUE APENAS SE A API SETADA NO CÓDIGO FOI DE FATO INCREMENTADA COM AS NOVAS INFORMAÇÕES ENVIADAS.
 
 
 ## 🛠️ Construído com
