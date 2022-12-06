@@ -1,6 +1,6 @@
-# INTEGRAÇÃO DE SISTEMAS VIA SANKHYA, POR DANILO TEOFILO ~https://github.com/daniloteofilo
+# INTEGRAÇÃO BÁSICA DE SISTEMAS VIA SANKHYA, POR DANILO TEOFILO ~https://github.com/daniloteofilo
 
-# Pequeno manual de instruções para que devs que utilizam o ERP SANKHYA consigam entender e fazer uma integração de sistemas via API.
+## Pequeno manual de instruções para que devs que utilizam o ERP SANKHYA consigam entender e fazer uma integração de sistemas via API com os métodos *POST* e *GET*.
 
 ## 🚀 Começando
 
@@ -183,11 +183,19 @@ public class nomeDaClass implements AcaoRotinaJava {
 ===============FIM DO CÓDIGO=============
 
 ```
-O código acima está preparado para enviar informações para a sua API utilizando o METHOD POST com OkHttp, se a sua necessidade for outro METHOD, faça as devidas adaptações ao código.
+O código acima está preparado para enviar informações para a sua API utilizando o METHOD *POST* com OkHttp, se a sua necessidade for outro METHOD, faça as devidas adaptações ao código.  -> https://www.baeldung.com/guide-to-okhttp
 ```
 
 ```
-Baixe todas as 
+Baixe todas as libs relacionadas ao SDK que o sankhya necessita para rodar e faça os imports no seu workspace.  ->https://developer.sankhya.com.br/docs/sdk-sankhya
+```
+
+```
+Note que no seu código copiado da explicação, a maioria dos imports não estarão funcionando, tente clicar nos erros e fazer os imports recomendados, alguns deles serão diretamente do SDK do sankhya. Para alguns imports, vc terá que fazer a aquisição da lib de forma manual, baixe todas as libs necessárias e manualmente inclua nas dependências do seu projeto, faça as devidas correções que o código irá pedir.
+```
+
+```
+Quando o código estiver "setado" de maneira que seu IDE não esteja reconhecendo erros, faça o EXPORT do seu projeto com a extensão .jar, para que seja possível fazer o upload dele no *Sankhya* para a tela de MÓDULO JAVA. A grande dica aqui é que você consiga fazer o código rodar de maneira que o resultado desejado seja alcançado, já que para debugar dentro do próprio sankhya seria bem mais complicado.
 ```
 
 
