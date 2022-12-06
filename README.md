@@ -306,7 +306,7 @@ Ir ao menu "Construtor de Telas", clicar na aba "Ações" e adicionar uma nova a
 	coloque um nome que faça sentido, de preferência que seja um verbo que reflita o que o seu código está programado para fazer,
 		 defina o tipo como "Rotina Java", 
 			escolha o módulo que você criou na tela "Módulo Java",
-				 clique em *Baixar biblioteca de extensões* e escolha a classe que contém o código que será executado.
+				 clique no *BOTÃO AO LADO ESQUERDO* do nome -Baixar biblioteca de extensões- e escolha a classe que contém o código que será executado.
 ```
 
 Depois seguiremos para nossa tela criada, assim como foi definido nos pré-requisitos desse manual.
