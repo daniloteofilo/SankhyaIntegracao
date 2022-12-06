@@ -1,4 +1,4 @@
-## INTEGRAÇÃO BÁSICA DE SISTEMAS VIA SANKHYA, POR DANILO TEOFILO ~https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/
+## INTEGRAÇÃO BÁSICA DE SISTEMAS VIA SANKHYA COM OS MÉTODOS *POST* E *GET*, POR DANILO TEOFILO & TALES SILVA.
 
 ### Pequeno manual de instruções para que devs que utilizam o ERP SANKHYA consigam entender e fazer uma integração de sistemas via API com os métodos *POST* e *GET* via botão de ação.
 
@@ -63,10 +63,15 @@ Adicionar uma nova class dentro do pacote criado anteriormente.
 ```
 Abrir o código da class criada e colar nele o código de integração a seguir com as alterações necessárias para o seu projeto.
 A primeira vista, vai ter muito erro no código, mas iremos resolver tudo com as devidas importações.
+
 ```
-================CÓDIGO=================
+================CÓDIGO METHOD POST =================
 ```
 /*  ATENÇÃÃÃÃÃÃÃÃO, MUDE TODOS OS NOMES DE PACOTES, CLASSES E VARIAVEIS PARA QUE FAÇAM SENTIDO NO SEU PROJETO*/
+
+
+/* O CÓDIGO ABAIXO ESTA CONSULTANDO UMA TABELA E ARMAZENANDO OS VALORES DA CONSULTA EM VARIÁVEIS E ENVIANDO PARA A API DEFINIDA, LEMBRANDO QUE AS CONSULTAS PODEM
+SER ALIMENTADAS COM PARÂMETROS QUE SÃO PREENCHIDOS NO PRÓPRIO SANKHYA */
 
 
 package br.nomeDoProjeto;
@@ -189,6 +194,95 @@ public class nomeDaClass implements AcaoRotinaJava {
 O código acima está preparado para enviar informações para a sua API utilizando o METHOD *POST* com OkHttp, se a sua necessidade for outro METHOD, faça as devidas adaptações ao código.  -> https://www.baeldung.com/guide-to-okhttp
 ```
 
+================CÓDIGO METHOD GET =================
+
+```
+/*  ATENÇÃÃÃÃÃÃÃÃO, MUDE TODOS OS NOMES DE PACOTES, CLASSES E VARIAVEIS PARA QUE FAÇAM SENTIDO NO SEU PROJETO*/
+
+/* O CÓDIGO ABAIXO ESTA RECEBENDO AS INFORMAÇÕES DE UMA API E FAZENDO O INCREMENTO DA TABELA DO SANKHYA COM O VALOR ARMAZENADO NA VARIÁVEL, LEMBRANDO QUE OS VALORES PODEM SER DEFINIDOS COM PARÂMETROS QUE SÃO PREENCHIDOS NO PRÓPRIO SANKHYA */
+
+
+package br.nomeDoProjeto;
+
+import java.math.BigDecimal;
+
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import br.com.sankhya.extensions.actionbutton.AcaoRotinaJava;
+import br.com.sankhya.extensions.actionbutton.ContextoAcao;
+import br.com.sankhya.jape.core.JapeSession;
+import br.com.sankhya.jape.vo.DynamicVO;
+import br.com.sankhya.jape.wrapper.JapeFactory;
+import br.com.sankhya.jape.wrapper.JapeWrapper;
+import br.com.sankhya.modelcore.MGEModelException;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+
+public class testeGet implements AcaoRotinaJava{
+	public void doAction(ContextoAcao contexto) throws Exception  {
+		OkHttpClient client = new OkHttpClient().newBuilder()
+				  .build();
+				okhttp3.MediaType mediaType = okhttp3.MediaType.parse("text/plain");
+				String urlApi = "/*url completa da sua api, se for necessário algum tipo de token, o token deve ser passado junto a url da API*/";
+				
+				Request request = new Request.Builder()
+				  .url("urlApi")
+				  .method("GET", null)
+				  .build();
+				okhttp3.Response response = client.newCall(request).execute();
+				String result = response.body().string();
+				
+				JSONArray jsonObject = new JSONArray(result);
+				
+				/*NA VARIÁVEL ABAIXO "teste",ESTOU ARMAZENANDO APENAS O PRIMEIRO INDICE DA API, RECOMENDO FORTEMENTE QUE VOCÊ USE ALGUM TIPO DE LAÇO DE 
+				REPETIÇÃO PARA PEGAR TODOS OS DADOS DO SEU INTERESSE, ESTUDE SOBRE COMO TRATAR DADOS JSON EM JAVA */
+				
+				JSONObject teste = jsonObject.getJSONObject(0);
+				
+				String cidade = teste.getString("id");
+				BigDecimal cidade2 = new BigDecimal(cidade);
+				
+				String name = teste.getString("name");
+				
+				inserirSankhya(cidade2, name);
+				
+	}
+
+	private static void inserirSankhya(BigDecimal cidade2, String name) throws MGEModelException {
+		// TODO Auto-generated method stub
+		
+		JapeSession.SessionHandle hnd = null;
+		try {
+			hnd = JapeSession.open();
+			JapeWrapper empresaDAO = JapeFactory.dao("AD_TESTEDANILO");
+			DynamicVO save = empresaDAO.create()
+				.set("CODTESTEDANILO", cidade2)
+				.set("TESTETXT", name)
+				.save();
+			
+		} catch (Exception e) {
+			MGEModelException.throwMe(e);
+		} finally {
+			JapeSession.close(hnd);
+		}
+	}
+}
+
+
+
+
+
+```
+
+===============FIM DO CÓDIGO=============
+
+```
+O código acima está preparado para receber informações de uma API utilizando o METHOD *GET* com OkHttp, se a sua necessidade for outro METHOD, faça as devidas adaptações ao código.  -> https://www.baeldung.com/guide-to-okhttp
+```
+
+
 ```
 Baixe todas as libs relacionadas ao SDK que o sankhya necessita para rodar e faça os imports no seu workspace.  ->https://developer.sankhya.com.br/docs/sdk-sankhya
 ```
@@ -206,7 +300,7 @@ Quando o código estiver "setado" de maneira que seu IDE não esteja reconhecend
 ```
 Ir ao menu "Construtor de Telas", clicar na aba "Ações" e adicionar uma nova ação.
 ```
-*OS CAMPOS OBRIGATÓRIOS PODEM PREENCHIDOS COM A SEGUINTE RECOMENDAÇÃO:*
+*OS CAMPOS OBRIGATÓRIOS PODEM SER PREENCHIDOS COM A SEGUINTE RECOMENDAÇÃO:*
 ```
  No campo de descrição 
 	coloque um nome que faça sentido, de preferência que seja um verbo que reflita o que o seu código está programado para fazer,
@@ -224,17 +318,21 @@ Depois seguiremos para nossa tela criada, assim como foi definido nos pré-requi
 
 ## 🛠️ Construído com
 ```
-
+Esse tutorial foi construído principalmente por mim(Danilo) com pouco conhecimento em Java e mostra de maneira básica como podem ser feitas algumas requisições pela plataforma SANKHYA, com exemplos dos métodos *GET* e *POST*.
+Para sugestões de melhora no código, possíveis correções e dúvidas, consulte os autores.
 ```
 
 ## 📌 Versão
 
 tutorial ainda em construção.
 
-## ✒️ Autor
+## ✒️ Autores
 
 Danilo Teófilo  
-Me adicione no linkedin(https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/)
+Me adicione no linkedin ->https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/
+
+Tales Silva </br>
+Me adicione no linkedin -> https://www.linkedin.com/in/tales-silva-050731256/
 
 
 ## 📄 Licença
