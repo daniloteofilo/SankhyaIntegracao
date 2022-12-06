@@ -49,7 +49,7 @@ Abra a IDE da sua preferência e mãos na massa, eu utilizo eclipse.
 ```
 
 ```
-Criar um novo Java Project(projeto java) com o nome que fizer sentido acompanhado do prefixo "br."(Exemplo:  br.meuProjeto), visualize o quadro JRE, no primeiro select você vai colocar a versão JavaSE1.8
+Criar um novo Java Project(projeto java) com o nome que fizer sentido, visualize o quadro JRE, no primeiro select você vai colocar a versão JavaSE1.8
 ```
 
 ```
@@ -308,13 +308,13 @@ Ir ao menu "Construtor de Telas", clicar na aba "Ações" e adicionar uma nova a
 			escolha o módulo que você criou na tela "Módulo Java",
 				 clique no *BOTÃO AO LADO ESQUERDO* do nome -Baixar biblioteca de extensões- e escolha a classe que contém o código que será executado.
 ```
-
+```
 Depois seguiremos para nossa tela criada, assim como foi definido nos pré-requisitos desse manual.
 	Clique no botão de ação
 		Execute a ação nomeada no campo de descrição
 			SE TIVER DADO TUDO CERTO, O CÓDIGO SIMPLESMENTE EXECUTARÁ E NÃO APARECERÁ NENHUMA MENSAGEM, 
 				VERIFIQUE APENAS SE A API SETADA NO CÓDIGO FOI DE FATO INCREMENTADA COM AS NOVAS INFORMAÇÕES ENVIADAS.
-
+```
 
 ## 🛠️ Construído com
 ```
