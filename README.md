@@ -1,6 +1,6 @@
-# INTEGRAÇÃO BÁSICA DE SISTEMAS VIA SANKHYA, POR DANILO TEOFILO ~https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/
+## INTEGRAÇÃO BÁSICA DE SISTEMAS VIA SANKHYA, POR DANILO TEOFILO ~https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/
 
-## Pequeno manual de instruções para que devs que utilizam o ERP SANKHYA consigam entender e fazer uma integração de sistemas via API com os métodos *POST* e *GET*.
+### Pequeno manual de instruções para que devs que utilizam o ERP SANKHYA consigam entender e fazer uma integração de sistemas via API com os métodos *POST* e *GET* via botão de ação.
 
 ## 🚀 Começando
 
@@ -204,7 +204,7 @@ Quando o código estiver "setado" de maneira que seu IDE não esteja reconhecend
 #### Para fazer o teste, basta seguir os próximos passos.
 
 ```
-Ir no menu "Construtor de Telas", clicar na aba "Ações" e adicionar uma nova ação.
+Ir ao menu "Construtor de Telas", clicar na aba "Ações" e adicionar uma nova ação.
 ```
 *OS CAMPOS OBRIGATÓRIOS PODEM PREENCHIDOS COM A SEGUINTE RECOMENDAÇÃO:*
 ```
@@ -215,7 +215,7 @@ Ir no menu "Construtor de Telas", clicar na aba "Ações" e adicionar uma nova a
 				 clique em *Baixar biblioteca de extensões* e escolha a classe que contém o código que será executado.
 ```
 
-Depois seguiremos para nossa tela criada, assim como recomendado na linha 27 desse manual de instruções.
+Depois seguiremos para nossa tela criada, assim como foi definido nos pré-requisitos desse manual.
 	Clique no botão de ação
 		Execute a ação nomeada no campo de descrição
 			SE TIVER DADO TUDO CERTO, O CÓDIGO SIMPLESMENTE EXECUTARÁ E NÃO APARECERÁ NENHUMA MENSAGEM, 
